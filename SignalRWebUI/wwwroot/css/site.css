@@ -1,0 +1,67 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+/* Widget genel stil ayarlarý */
+.widgettrue {
+    background-color: #4CAF50; /* Varsayýlan yeþil arka plan */
+    color: white;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+.widgetfalse {
+    background-color: #FF0000; /* Kýrmýzý arka plan */
+    color: white;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+/* Dolu masalar için arka planý kýrmýzý yapýyoruz */
+.status-true {
+    background-color: #FF6347; /* Kýrmýzý arka plan (Dolu) */
+}
+
+/* Boþ masalar için yeþil arka plan */
+.status-false {
+    background-color: #4CAF50; /* Yeþil arka plan (Boþ) */
+}
+
+/* Widget ikonu için stil */
+.widget-icon i {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+/* Masa adý ve durum metni için stil */
+.widget-text h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.widget-text p {
+    font-size: 16px;
+}
+
