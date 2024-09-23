@@ -16,11 +16,24 @@ Bu projede Asp.Net Api SignalR ile QR Kodlu Sipariş Yönetimi senaryosu ele al�
 ⚡ AJAX - Hızlı ve dinamik veri işlemleri
 
 
+
 **Frontend:**
 🖥️ HTML
+
 🎨 CSS
+
 📜 JavaScript
+
 🌍 Bootstrap
+
+**Genel Tanım:**
+
+Proje masalar için oluşturulan QR Code ile anasayfaya yönlendirilme işlemi gerçekleşiyor(Revizeler yapılacaktır).
+Anasayfa içerisinde menülere, iletişim bilgilerine, lokasyona, sipariş ve sepet ekranlarına ulaşılabiliyor.
+Anasayfa içerisindeki tüm detaylar Admin sayfasından düzenlenmektedir. Admin anlık masa durumlarına, sipariş durumlarına, mail işlemlerine,katagori vb. işlemler için güncelleme, ekleme ve silme işlemlerini yönetebiliyor. 
+Giriş yapma işlemi ise sadece Admin sayfası için geçerlidir. Diğer sayfalar kullanıcılara açıktır.
+SignalR teknolojisi sayesinde anlık mesajlaşma, anlık bildirimler ve anlık sepet işlemleri başarılı bir şekilde gerçekleştiriliyor.
+Proje katmanlara ve modüllere ayrılarak daha kolay anlaşılabilir ve daha kolay revize edilebilir hale getirildi.
 
 
 
