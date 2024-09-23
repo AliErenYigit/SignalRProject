@@ -1,6 +1,29 @@
 
 **Asp.Net Core Api SignalR ile QR Kodlu Sipariş Yönetimi**
 
+Bu projede Asp.Net Api SignalR ile QR Kodlu Sipariş Yönetimi senaryosu ele alınmıştır. 
+  Murat Yücedağ hem Youtube hem de Udemy üzerinden eğitimler vermekte. Kendisine ait bu kursu tamamladım. Proje içerisinde bir çok mimariye bir çok kütüphaneye değinildi. Eğitim alanında önemli ölçüde bilgi sahibi olmamı sağladı. 
+
+
+  **Projede Kullanılan Teknolojiler**
+
+🖥️ Asp.Net Core API - Güçlü ve ölçeklenebilir API geliştirme
+
+🔄 SignalR - Gerçek zamanlı veri iletişimi
+
+🗄️ MSSQL - Güvenilir ve performanslı veri tabanı yönetimi
+
+⚡ AJAX - Hızlı ve dinamik veri işlemleri
+
+
+**Frontend:**
+🖥️ HTML
+🎨 CSS
+📜 JavaScript
+🌍 Bootstrap
+
+
+
 **Ana Sayfa Görünümü**
 
 ![image](https://github.com/user-attachments/assets/651dc658-159d-48e5-af3d-816c1b4799f9)
