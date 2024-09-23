@@ -16,8 +16,8 @@
 
 <body class="sub_page">
 
-    @await Component.InvokeAsync("_MenuNavbarPartial")
-    <br /> 
+    @await Component.InvokeAsync("_BasketsNavbarPartial")
+    <br />
     <br />
     <div class="container-fluid">
         <div class="row px-xl-5">
@@ -25,7 +25,8 @@
                 <nav class="breadcrumb bg-dark mb-30">
                     <a class="breadcrumb-item text-white" href="/Default/Index/">Ana Sayfa</a>
                     <a class="breadcrumb-item text-white" href="/Menu/Index/">Menü</a>
-                    <span class="breadcrumb-item active">Sepetiniz
+                    <span class="breadcrumb-item active">
+                        Sepetiniz
 
                     </span>
 
@@ -54,30 +55,30 @@
                     </thead>
                     @*@foreach(var item in Model)
                     {
-                        basketTotalPrice = Model.Sum(x => x.Price);
-                        tax = basketTotalPrice * 10 / 100;
-                        basketTotalPriceWithTax =basketTotalPrice + tax;
-                        count++;
-                        <tbody class="align-middle">
-                            <tr>
-                                <td class="align-middle">@count</td>
-                                <td class="align-middle">@item.ProductName</td>
-                                <td class="align-middle">@item.Count</td>
-                                <td class="align-middle">@item.Price</td>
-                                <td class="align-middle">@item.TotalPrice</td>
-                                <td class="align-middle btn-delete"><a class="btn btn-sm btn-danger" href="/Baskets/DeleteBasket/@item.BasketID"><i class="fa fa-times"></i></a></td>
-                            </tr>
+                    basketTotalPrice = Model.Sum(x => x.Price);
+                    tax = basketTotalPrice * 10 / 100;
+                    basketTotalPriceWithTax =basketTotalPrice + tax;
+                    count++;
+                    <tbody class="align-middle">
+                    <tr>
+                    <td class="align-middle">@count</td>
+                    <td class="align-middle">@item.ProductName</td>
+                    <td class="align-middle">@item.Count</td>
+                    <td class="align-middle">@item.Price</td>
+                    <td class="align-middle">@item.TotalPrice</td>
+                    <td class="align-middle btn-delete"><a class="btn btn-sm btn-danger" href="/Baskets/DeleteBasket/@item.BasketID"><i class="fa fa-times"></i></a></td>
+                    </tr>
 
-                        </tbody>
+                    </tbody>
                     }*@
-                    @foreach(var group in Model.GroupBy(x=>x.ProductName))
+                    @foreach (var group in Model.GroupBy(x => x.ProductName))
                     {
                         var item = group.First();
                         var itemCount = group.Count();
 
                         basketTotalPrice = Model.Sum(x => x.Price);
                         tax = basketTotalPrice * 10 / 100;
-                        basketTotalPriceWithTax =basketTotalPrice + tax;
+                        basketTotalPriceWithTax = basketTotalPrice + tax;
                         count++;
 
                         totalPriceWithCount = item.Price * itemCount;
@@ -101,7 +102,7 @@
             <div class="col-log-4">
                 <form>
                     <div class="input-group">
-                        <input type="text" id="cuponcode" class="form-control border-1 p-4" placeholder="Kupon Kodunuz"/>
+                        <input type="text" id="cuponcode" class="form-control border-1 p-4" placeholder="Kupon Kodunuz" />
                         <div>
                             <a style="height:48px;padding-top:11px;margin-left:5px;" class="btn btn-warning" id="btncuponcode">Kupon Uygula</a>
                         </div>
@@ -144,7 +145,7 @@
 
     @await Component.InvokeAsync("_UILayoutScriptPartial")
 
-    
+
 
 
 </body>

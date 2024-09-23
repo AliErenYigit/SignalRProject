@@ -1,8 +1,12 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using FluentValidation;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.IdentityModel.Tokens;
 using SignalRBusinessLayer.Abstract;
 using SignalRDtoLayer.BookingDto;
 using SignalREntityLayer.Entities;
+using System.ComponentModel.DataAnnotations;
 using System.Security.Policy;
 
 namespace SignalRApi.Controllers
@@ -12,11 +16,15 @@ namespace SignalRApi.Controllers
     public class BookingController : ControllerBase
     {
         private readonly IBookingService _bookingService;
+        private readonly IValidator<CreateBookingDto> _validator; 
 
-        public BookingController(IBookingService BookingService)
+        public BookingController(IBookingService BookingService,IValidator<CreateBookingDto> validator)
         {
             _bookingService = BookingService;
+            _validator = validator;
         }
+
+       
 
         [HttpGet]
         public IActionResult BookingLİst()
@@ -27,6 +35,12 @@ namespace SignalRApi.Controllers
         [HttpPost]
         public IActionResult CreateBooking(CreateBookingDto createBookingDto)
         {
+            var validation=_validator.Validate(createBookingDto);
+            if(!validation.IsValid)
+            {
+                return BadRequest(validation.Errors);
+
+            }
             Booking Booking = new Booking()
             {
                 Name = createBookingDto.Name,
